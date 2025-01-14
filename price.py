@@ -47,7 +47,7 @@ def main():
 
     xml_root = ET.parse(input_file).getroot()
 
-    _main = xml_root.find("./circuit[@name='{}']".format(circuit_name))
+    _main = xml_root.find("./circuit[@name='{s-mips}']".format(circuit_name))
     if _main is None:
         print("There is no circuit called {}".format(circuit_name))
         exit(1)
